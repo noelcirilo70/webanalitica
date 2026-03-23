@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Galería Dashboards Premium | Web Analítica</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body class="mesh-gradient selection:bg-[rgba(45,212,191,0.25)]">
+  <nav class="glass-nav px-6 py-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center">
+        <a class="flex items-center gap-3 group" href="index.html#top" aria-label="Ir a Inicio">
+          <div
+            class="w-10 h-10 bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary)] rounded-lg flex items-center justify-center shadow-lg shadow-sky-500/10 group-hover:shadow-teal-500/10 transition-shadow">
+            <span class="material-symbols-outlined text-white">monitoring</span>
+          </div>
+          <span class="text-xl font-bold tracking-tight text-white font-sora">
+            Web Analítica <span class="text-[var(--secondary)]">Premium</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a class="hover:text-[var(--primary)] transition-colors" href="index.html#top">Inicio</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="dashboards.html">Dashboards</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="index.html#integraciones">Integraciones</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="agendar-demo.html">Agendar Demo</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="precios.html">Precios</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="hidden md:inline-flex p-2 rounded-full hover:bg-slate-800 transition-colors" aria-label="modo">
+            <span class="material-symbols-outlined text-slate-400">dark_mode</span>
+          </button>
+
+          <button
+            class="md:hidden p-2 rounded-xl border border-slate-700/60 bg-slate-900/40 hover:bg-slate-900/60 transition"
+            id="mobileMenuBtn" aria-label="Abrir menú">
+            <span class="material-symbols-outlined text-slate-200">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="md:hidden px-0">
+        <div id="mobileMenu" class="hidden px-0 pb-1 pt-4">
+          <div class="grid gap-2 text-sm font-medium text-slate-300">
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="index.html#top">Inicio</a>
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="dashboards.html">Dashboards</a>
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="index.html#integraciones">Integraciones</a>
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="agendar-demo.html">Agendar Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-20 pb-12 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center md:text-left">
+      <div class="max-w-3xl">
+        <div
+          class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/40 border border-slate-700/70 shadow-sm text-[var(--secondary)] text-xs font-bold uppercase tracking-widest mb-8">
+          <span class="relative flex h-2 w-2">
+            <span
+              class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[var(--secondary)] opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[var(--secondary)]"></span>
+          </span>
+          Premium Amazon Insights
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] text-white">
+          Galería Dashboards
+          <span
+            class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] via-[var(--secondary)] to-[var(--accent)]">
+            Premium
+          </span>
+        </h1>
+
+        <p class="text-lg md:text-xl text-slate-400 leading-relaxed mb-10 max-w-2xl">
+          Optimización avanzada para Amazon Seller Central. Explore nuestra suite de analítica diseñada para escalar su
+          rentabilidad mediante Power BI.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <main class="pb-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 mb-16 py-8 border-y border-slate-800/70">
+        <div class="flex flex-wrap items-center gap-3">
+          <button class="filter-btn active" data-filter="all" type="button">Todos los Módulos</button>
+          <button class="filter-btn" data-filter="profit" type="button">Rentabilidad</button>
+          <button class="filter-btn" data-filter="ppc" type="button">Advertising (PPC)</button>
+          <button class="filter-btn" data-filter="logistics" type="button">Logística &amp; Stock</button>
+          <button class="filter-btn" data-filter="global_sales" type="button">Ventas Globales</button>
+          <button class="filter-btn" data-filter="executive" type="button">Executive</button>
+          <button class="filter-btn" data-filter="growth" type="button">Growth</button>
+          <button class="filter-btn" data-filter="cro" type="button">Optimización (CRO)</button>
+        </div>
+
+        <div class="relative group w-full md:w-72">
+          <span aria-hidden="true"
+            class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[var(--secondary)] text-lg">search</span>
+          <input class="search-input" id="dashboardSearch" placeholder="Buscar dashboard..." type="text" />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10" id="dashboard-grid">
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="LIVE API"
+          data-category="Ventas Globales"
+          data-description="Panel de rendimiento de ventas con visión 360°: ventas totales, unidades, TACoS, ROAS blended y comparativas vs período anterior. Incluye tendencias de ventas y gasto publicitario, desglose por canal, métricas clave (CTR, conversión, AOV, CPC) y control de margen/beneficio para optimizar decisiones diarias."
+          data-freq_label="Frecuencia"
+          data-freq_value="Daily + Real-Time"
+          data-metrics="Total Sales|Total Units|TACoS %|ROAS (Blended)|Revenue|Orders|CTR|Conversion|AOV|Avg. CPC|Profit|Profit Margin|Sales & Spend Trend|Channel Breakdown|Daily Performance"
+          data-metrics_title="KPIs de Ventas"
+          data-ref="DB-SALES-05"
+          data-support_label="Soporte"
+          data-support_value="Multi-Region / Multi-Brand"
+          data-title="Sales Performance"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="Sales Performance"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_SalesPerformance.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Ventas</span>
+                  <h3 class="text-2xl font-bold text-white">Sales Performance</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  LIVE API
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Dashboard de ventas con ROAS/TACoS, gasto publicitario, breakdown por canal y KPIs clave en tiempo real.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="EXECUTIVE VIEW"
+          data-category="Performance Overview"
+          data-description="Vista ejecutiva semanal con consolidación de ventas, gasto publicitario, composición orgánica vs pagada, ACOS/TACOS, rendimiento por marca y análisis por país. Diseñado para reuniones estratégicas y toma de decisiones rápidas."
+          data-freq_label="Frecuencia"
+          data-freq_value="Weekly Consolidation"
+          data-metrics="Total Sales|Sales by Brand|Sales Composition|Ad Spend|Ad Spend by Brand|ACOS|ACOS by Brand|TACOS Performance|Sales by Country|Inventory Levels"
+          data-metrics_title="KPIs Ejecutivos"
+          data-ref="DB-WEEK-06"
+          data-support_label="Soporte"
+          data-support_value="Executive / C-Level Reporting"
+          data-title="Weekly Stand Up"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="Weekly Stand Up Dashboard"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_WeeklyStandup.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Estrategia</span>
+                  <h3 class="text-2xl font-bold text-white">Weekly Stand Up</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  EXECUTIVE VIEW
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Resumen semanal con ventas, publicidad, ACOS/TACOS, rendimiento por marca y análisis global por país.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="STOCK CONTROL"
+          data-category="Logística &amp; Stock"
+          data-description="Análisis avanzado de inventario con DOI diario, inventario total por día y desglose detallado por ASIN/SKU. Incluye FBA Reserved, inbound, ventas 14d, revenue y detección de overstock para optimizar capital y evitar roturas o sobrecostes."
+          data-freq_label="Frecuencia"
+          data-freq_value="Daily Operational Sync"
+          data-metrics="DOI by Day|Total Inventory by Day|Inventory Status|FBA Reserved Units|FBA Inbound|FBA Total Inventory|Qty Sold 14d|Revenue by SKU|Overstock Detection|Daily Sold Units"
+          data-metrics_title="Métricas de Inventario"
+          data-ref="DB-INV-07"
+          data-support_label="Soporte"
+          data-support_value="FBA Inventory Deep Dive"
+          data-title="Inventory Performance"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="Inventory Performance Dashboard"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_InventoryPerformance.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Logística</span>
+                  <h3 class="text-2xl font-bold text-white">Inventory Performance</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  STOCK CONTROL
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Control operativo de DOI, inventario FBA, ventas por SKU y detección de overstock en tiempo real.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="EXPERIMENTAL"
+          data-category="Optimización &amp; CRO"
+          data-description="Análisis comparativo A/B con medición de impacto en ventas, conversión, AOV y métricas publicitarias. Compare periodos Before vs Current vs After y detecte variaciones en ACOS, TACOS, CTR y rendimiento general para validar decisiones estratégicas."
+          data-freq_label="Frecuencia"
+          data-freq_value="Campaign-Based Tracking"
+          data-metrics="Before vs Current Comparison|After Impact Analysis|Conversion Lift|AOV Variation|CTR Change|ACOS & TACOS Delta|CPO Impact|Sessions & Page Views|Ads Performance Shift"
+          data-metrics_title="Métricas de Experimentación"
+          data-ref="DB-ABT-08"
+          data-support_label="Soporte"
+          data-support_value="CRO + PPC Optimization"
+          data-title="A/B Test Analysis"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="A/B Test Analysis Dashboard"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_ABTest.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Optimización</span>
+                  <h3 class="text-2xl font-bold text-white">A/B Test Analysis</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  EXPERIMENTAL
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Comparativa Before vs After con impacto en ventas, conversión, ACOS/TACOS y rendimiento publicitario.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="ACQUISITION"
+          data-category="Growth &amp; Marketing"
+          data-description="Análisis integral de adquisición de clientes con comparativa entre órdenes y ventas orgánicas vs PPC y Sponsored Display. Incluye evolución de CPC promedio, TACOS por canal, eficiencia de inversión y control del mix de revenue."
+          data-freq_label="Frecuencia"
+          data-freq_value="Weekly Marketing Sync"
+          data-metrics="Organic vs PPC Orders|Organic vs PPC Sales|Avg PPC Spend|Avg CPC|SP TACOS|SD TACOS|Revenue Mix|Customer Acquisition Efficiency|Paid vs Organic Growth"
+          data-metrics_title="Métricas de Adquisición"
+          data-ref="DB-CUST-09"
+          data-support_label="Soporte"
+          data-support_value="PPC + Growth Analytics"
+          data-title="Customer Acquisition"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="Customer Acquisition Dashboard"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_CustomerAcquisition.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Growth</span>
+                  <h3 class="text-2xl font-bold text-white">Customer Acquisition</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  ACQUISITION
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Control del mix orgánico vs pagado con análisis de CPC, TACOS y eficiencia de adquisición.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="PPC CONTROL"
+          data-category="Advertising Intelligence"
+          data-description="Vista operativa de campañas con desglose por Campaign y ASIN. Analice SP Sales, % Sales vs % Spend, ACOS, CPC, CVR e impresiones para optimizar estructura, presupuesto y rentabilidad publicitaria."
+          data-freq_label="Frecuencia"
+          data-freq_value="Daily Campaign Sync"
+          data-metrics="Campaign-Level Performance|ASIN-Level Breakdown|SP Sales|% Sales vs % Spend|SP ACOS|SP CVR|SP CPC|Impressions & Units|Campaign Efficiency Heatmap"
+          data-metrics_title="Métricas de Campañas"
+          data-ref="DB-CAMP-10"
+          data-support_label="Soporte"
+          data-support_value="Sponsored Products Optimization"
+          data-title="Campaign Overview"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="Campaign Overview Dashboard"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_CampaignOverview.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Publicidad</span>
+                  <h3 class="text-2xl font-bold text-white">Campaign Overview</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  PPC CONTROL
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Análisis detallado por campaña y ASIN con control de ACOS, CPC, CVR y eficiencia de inversión.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="PERIOD COMPARISON"
+          data-category="Rentabilidad Estratégica"
+          data-description="Comparativa financiera Actual vs Prior Period con análisis de revenue, net revenue, pedidos, impresiones, AOV, CTR, CPO y TACOS. Identifique variaciones porcentuales, tendencias negativas y oportunidades de optimización por ASIN."
+          data-freq_label="Frecuencia"
+          data-freq_value="Period-Based Analysis"
+          data-metrics="Revenue vs Prior|Net Revenue Delta|Orders Variation|Impressions Change|AOV Comparison|CTR Trend|CPO Impact|TACOS Variation|ASIN Contribution Analysis"
+          data-metrics_title="Métricas de Rentabilidad"
+          data-ref="DB-PROF-11"
+          data-support_label="Soporte"
+          data-support_value="Financial Benchmarking"
+          data-title="Profitability vs Prior Period"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="Profitability vs Prior Period Dashboard"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_ProfitabilityVsPrior.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Rentabilidad</span>
+                  <h3 class="text-2xl font-bold text-white">Profitability vs Prior Period</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  PERIOD COMPARISON
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Comparativa estratégica de revenue y KPIs clave vs periodo anterior con análisis de impacto financiero.
+              </p>
+            </div>
+          </div>
+        </label>
+
+        <label class="cursor-pointer group dashboard-card"
+          data-badge="SKU LEVEL"
+          data-category="Logística &amp; Stock"
+          data-description="Análisis detallado por SKU y categoría con disponibilidad FBA, inbound, reserved, rotación 14d/1m y ventas 30 días. Detecte riesgos de stockout, sobrestock y desviaciones de inventario diario para optimizar capital y abastecimiento."
+          data-freq_label="Frecuencia"
+          data-freq_value="Weekly SKU Monitoring"
+          data-metrics="SKU Availability Rate|FBA Inbound vs Warehouse Qty|In-Stock ROT 14d|In-Stock ROT 1m|FBA Reserved Qty|30 Day Sales|Daily Inventory Drift|Category-Level Breakdown"
+          data-metrics_title="Métricas por SKU"
+          data-ref="DB-SKU-12"
+          data-support_label="Soporte"
+          data-support_value="Category & SKU Deep Analysis"
+          data-title="Inventory SKU Analysis"
+          for="panel-toggle">
+          <div class="glass-card">
+            <div class="relative aspect-[16/9] overflow-hidden">
+              <img alt="Inventory SKU Analysis Dashboard"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="./assets/img/dashboard/Dashboard_InventorySKU.png" />
+              <div class="quick-view-overlay">
+                <div
+                  class="bg-slate-900/80 text-white px-6 py-3 rounded-full font-bold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 shadow-xl border border-slate-700/70">
+                  <span aria-hidden="true" class="material-symbols-outlined text-base">visibility</span>
+                  Explorar Detalles
+                </div>
+              </div>
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start mb-4">
+                <div>
+                  <span class="chip mb-3 inline-block">Logística</span>
+                  <h3 class="text-2xl font-bold text-white">Inventory SKU Analysis</h3>
+                </div>
+                <span
+                  class="bg-slate-900/50 text-[var(--secondary)] px-3 py-1 rounded-lg text-[10px] font-bold border border-slate-700/70">
+                  SKU LEVEL
+                </span>
+              </div>
+              <p class="text-slate-400 text-sm line-clamp-2">
+                Control granular por categoría y SKU con rotación, disponibilidad FBA y análisis de riesgo de stock.
+              </p>
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <div class="hidden mt-8 text-center text-slate-300/80" id="no-results">
+        No se encontraron dashboards para tu búsqueda.
+      </div>
+
+      <div
+        class="mt-24 p-12 glass-card bg-gradient-to-r from-slate-950/70 to-slate-900/60 relative overflow-hidden text-white border-none">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[rgba(45,212,191,0.18)] blur-[110px] -mr-32 -mt-32"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-[rgba(14,165,233,0.16)] blur-[110px] -ml-32 -mb-32"></div>
+        <div class="flex flex-col lg:flex-row items-center justify-between gap-10 relative z-10">
+          <div class="max-w-2xl text-center lg:text-left">
+            <h2 class="text-4xl font-extrabold mb-5 text-white">¿Necesita un Dashboard a medida?</h2>
+            <p class="text-slate-300/90 text-lg leading-relaxed">
+              Personalizamos métricas según su modelo de negocio. Integramos Power BI con su cuenta de Amazon para
+              ofrecerle la ventaja competitiva definitiva.
+            </p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a class="px-8 py-5 bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white font-extrabold rounded-2xl hover:scale-105 transition-all flex items-center justify-center gap-3 shadow-xl shadow-[rgba(14,165,233,0.18)]"
+              href="index.html#contact">
+              Consultoría Gratuita
+              <span aria-hidden="true" class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <input class="hidden" id="panel-toggle" type="checkbox" />
+
+  <div
+    class="fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] opacity-0 pointer-events-none transition-opacity duration-500"
+    id="overlay"></div>
+
+  <aside
+    class="fixed top-0 right-0 h-full w-full md:w-[650px] side-panel-glass z-[70] translate-x-full transition-transform duration-500 overflow-y-auto"
+    id="side-panel">
+    <div class="p-10">
+      <div class="flex items-center justify-between mb-10">
+        <label aria-label="Cerrar panel"
+          class="cursor-pointer p-3 hover:bg-slate-800/60 rounded-full transition-colors group border border-slate-700/70"
+          for="panel-toggle">
+          <span aria-hidden="true"
+            class="material-symbols-outlined text-slate-200 group-hover:text-[var(--secondary)]">close</span>
+        </label>
+        <div class="text-right">
+          <span class="text-[10px] text-slate-500 font-bold uppercase tracking-[0.2em]" id="panel-ref">
+            Referencia: DB-NET-01
+          </span>
+        </div>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden border border-slate-700/70 mb-10 shadow-lg aspect-video">
+        <img alt="Dashboard Deep Dive" class="w-full h-full object-cover" id="panel-image"
+          src="./assets/img/Dashboard_3.png" />
+      </div>
+
+      <div class="space-y-10">
+        <div>
+          <span class="chip mb-4 inline-block" id="panel-chip">Rentabilidad Estratégica</span>
+          <h2 class="text-4xl font-extrabold text-white mt-2 leading-tight" id="panel-title">Net Profit Master</h2>
+          <p class="text-slate-300 mt-6 leading-relaxed text-lg" id="panel-description">
+            Este módulo premium consolida todos los flujos financieros de su Amazon Seller Central. Obtenga una claridad
+            absoluta sobre el ROI de cada inversión publicitaria y el impacto real de las devoluciones en su margen
+            neto.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-6">
+          <div class="bg-slate-900/30 p-6 rounded-2xl border border-slate-700/70">
+            <div class="text-slate-500 text-[10px] font-bold mb-2 uppercase tracking-widest" id="panel-freq-label">
+              Frecuencia
+            </div>
+            <div class="text-white font-bold text-lg" id="panel-freq-value">Real-Time Sync</div>
+          </div>
+          <div class="bg-slate-900/30 p-6 rounded-2xl border border-slate-700/70">
+            <div class="text-slate-500 text-[10px] font-bold mb-2 uppercase tracking-widest" id="panel-support-label">
+              Soporte
+            </div>
+            <div class="text-white font-bold text-lg" id="panel-support-value">Multi-Marketplace</div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-extrabold mb-6 flex items-center gap-3" id="panel-metrics-title">
+            <span aria-hidden="true" class="material-symbols-outlined text-[var(--secondary)]">fact_check</span>
+            Métricas de Alto Impacto
+          </h4>
+          <div class="flex flex-wrap gap-2" id="panel-metrics">
+            <span
+              class="px-4 py-2 bg-slate-900/30 rounded-xl text-sm font-semibold text-slate-300 border border-slate-700/70 shadow-sm">
+              True Profit (Net)
+            </span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 pt-10 border-t border-slate-800/80">
+          <a class="w-full py-5 bg-slate-800 text-white font-bold rounded-2xl flex items-center justify-center gap-3 hover:bg-gradient-to-r hover:from-[var(--primary)] hover:to-[var(--secondary)] transition-all shadow-xl shadow-black/20"
+            href="index.html#contact">
+            Adquirir este Dashboard
+            <span aria-hidden="true" class="material-symbols-outlined text-lg">shopping_cart</span>
+          </a>
+
+          <button
+            class="w-full py-5 border-2 border-slate-700/70 text-white font-bold rounded-2xl hover:bg-slate-900/30 transition-all"
+            type="button">
+            Agendar Tour Virtual
+          </button>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="py-16 border-t border-slate-800 bg-[#01040f]" id="contact">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <div
+              class="w-8 h-8 bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary)] rounded flex items-center justify-center">
+              <span aria-hidden="true" class="material-symbols-outlined text-white text-sm">monitoring</span>
+            </div>
+            <span class="text-lg font-bold tracking-tight text-white font-display">Web Analítica</span>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Expertos en Business Intelligence para Amazon Sellers. Transformamos datos en activos estratégicos.
+          </p>
+          <div class="flex gap-4">
+            <a class="text-slate-400 hover:text-white transition-colors" href="#">
+              <span aria-hidden="true" class="material-symbols-outlined">public</span>
+            </a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="#">
+              <span aria-hidden="true" class="material-symbols-outlined">alternate_email</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Soluciones</h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Auditoría de Datos</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Dashboards a Medida</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Consultoría Amazon</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Automatización API</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Dashboard Modules</h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Módulo de Profit</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Control de PPC</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Gestión de Stock</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Atribución Externa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Contacto</h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <li class="flex items-start gap-2">
+              <span aria-hidden="true" class="material-symbols-outlined text-xs text-[var(--primary)] mt-1">mail</span>
+              <span>hello@webanalitica.pro</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span aria-hidden="true"
+                class="material-symbols-outlined text-xs text-[var(--primary)] mt-1">location_on</span>
+              <span>Barcelona, Hub Digital de Innovación</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-900 gap-4">
+        <p class="text-xs text-slate-600">© 2024 Web Analítica Premium. Todos los derechos reservados.</p>
+        <div class="flex gap-6 text-xs text-slate-600">
+          <a class="hover:text-slate-400" href="#">Privacidad</a>
+          <a class="hover:text-slate-400" href="#">Términos</a>
+          <a class="hover:text-slate-400" href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

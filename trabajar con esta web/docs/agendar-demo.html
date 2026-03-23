@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Agendar Demo | Web Analítica Premium</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body class="mesh-gradient" id="top">
+  <nav class="glass-nav px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a class="flex items-center gap-3 group" href="index.html#top" aria-label="Ir a Inicio">
+        <div
+          class="w-10 h-10 bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary)] rounded-lg flex items-center justify-center shadow-lg shadow-sky-500/10 group-hover:shadow-teal-500/10 transition-shadow">
+          <span class="material-symbols-outlined text-white">monitoring</span>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-white font-sora">
+          Web Analítica <span class="text-[var(--secondary)]">Premium</span>
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a class="hover:text-[var(--primary)] transition-colors" href="index.html#top">Inicio</a>
+        <a class="hover:text-[var(--primary)] transition-colors" href="dashboards.html">Dashboards</a>
+        <a class="hover:text-[var(--primary)] transition-colors" href="index.html#integraciones">Integraciones</a>
+        <a class="hover:text-[var(--primary)] transition-colors" href="agendar-demo.html">Agendar Demo</a>
+        <a class="hover:text-[var(--primary)] transition-colors" href="precios.html">Precios</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button
+          class="md:hidden p-2 rounded-xl border border-slate-700/60 bg-slate-900/40 hover:bg-slate-900/60 transition"
+          id="mobileMenuBtn" aria-label="Abrir menú">
+          <span class="material-symbols-outlined text-slate-200" id="mobileMenuIcon">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="md:hidden max-w-7xl mx-auto px-0">
+      <div id="mobileMenu" class="hidden px-6 pb-4 pt-3">
+        <div class="grid gap-2 text-sm font-medium text-slate-300">
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="index.html#top">Inicio</a>
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="dashboards.html">Dashboards</a>
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="index.html#integraciones">Integraciones</a>
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="#demo">Agendar Demo</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="relative overflow-hidden" id="demo">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+
+    <div aria-hidden="true" class="absolute inset-0 overflow-hidden pointer-events-none">
+      <span class="particle" style="left:10%; bottom:-12px; animation-duration: 9s;"></span>
+      <span class="particle" style="left:18%; bottom:-30px; animation-duration: 13s; animation-delay:-2s;"></span>
+      <span class="particle" style="left:28%; bottom:-18px; animation-duration: 11s; animation-delay:-5s;"></span>
+      <span class="particle" style="left:40%; bottom:-26px; animation-duration: 14s; animation-delay:-3s;"></span>
+      <span class="particle" style="left:52%; bottom:-14px; animation-duration: 10s; animation-delay:-7s;"></span>
+      <span class="particle" style="left:64%; bottom:-22px; animation-duration: 12s; animation-delay:-1s;"></span>
+      <span class="particle" style="left:76%; bottom:-16px; animation-duration: 9s; animation-delay:-6s;"></span>
+      <span class="particle" style="left:88%; bottom:-28px; animation-duration: 13s; animation-delay:-4s;"></span>
+      <span class="particle" style="left:94%; bottom:-20px; animation-duration: 11s; animation-delay:-8s;"></span>
+    </div>
+
+    <section class="max-w-7xl mx-auto px-6 py-12 lg:py-16">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <div class="relative reveal">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-6">
+            <span class="flex h-2 w-2 rounded-full bg-[var(--secondary)] animate-pulse"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-slate-400">Agenda en 2 minutos</span>
+          </div>
+
+          <h1 class="text-5xl lg:text-6xl font-extrabold leading-[1.1] mb-6 font-sora">
+            Agendemos tu <span class="text-gradient">Demo Premium</span>
+          </h1>
+
+          <p class="text-lg text-slate-400 leading-relaxed max-w-xl">
+            Cuéntanos tu marketplace, modelo de negocio y el alcance (ASINs + módulos). Te mostramos la suite y saldrás
+            con un plan de acción claro.
+          </p>
+
+          <div class="mt-10 ring-animated p-1 rounded-2xl">
+            <div class="card-glass rounded-2xl p-6 sm:p-7">
+              <div class="flex items-center justify-between gap-4 mb-6">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-[var(--secondary)]">event</span>
+                  <p class="font-semibold text-white">Qué pasa en la demo</p>
+                </div>
+                <span
+                  class="text-xs text-slate-400 bg-slate-900/40 border border-slate-700/60 rounded-full px-3 py-1">
+                  20–30 min
+                </span>
+              </div>
+
+              <div class="grid gap-6">
+                <div class="step">
+                  <span class="step-dot"></span>
+                  <p class="font-semibold text-white">1) Diagnóstico rápido</p>
+                  <p class="text-sm text-slate-400 mt-1">
+                    Identificamos margen real, performance PPC, logística y ventas por país.
+                  </p>
+                </div>
+
+                <div class="step">
+                  <span class="step-dot"></span>
+                  <p class="font-semibold text-white">2) Recorrido por dashboards</p>
+                  <p class="text-sm text-slate-400 mt-1">
+                    Te mostramos módulos relevantes según tu modelo (PL, Wholesale, Agency).
+                  </p>
+                </div>
+
+                <div class="step">
+                  <span class="step-dot"></span>
+                  <p class="font-semibold text-white">3) Plan de implementación</p>
+                  <p class="text-sm text-slate-400 mt-1">
+                    Definimos integraciones, KPIs, frecuencia de reportes y próximos pasos.
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-slate-400">
+                <span
+                  class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900/40 border border-slate-700/60">
+                  <span class="material-symbols-outlined text-slate-300 text-[18px]">shield_lock</span>
+                  Datos protegidos
+                </span>
+                <span
+                  class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900/40 border border-slate-700/60">
+                  <span class="material-symbols-outlined text-slate-300 text-[18px]">bolt</span>
+                  Respuesta &lt; 24h
+                </span>
+                <span
+                  class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900/40 border border-slate-700/60">
+                  <span class="material-symbols-outlined text-slate-300 text-[18px]">auto_graph</span>
+                  Insights accionables
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative reveal" id="demoFormWrap">
+          <div class="ring-animated p-1 rounded-[1.25rem]">
+            <div class="card-glass rounded-[1.20rem] p-6 sm:p-8 tilt" id="tiltCard"
+              aria-label="Formulario para agendar demo">
+              <div class="tilt-inner">
+                <div class="flex items-start justify-between gap-4 mb-6">
+                  <div>
+                    <p class="text-sm text-slate-400">Formulario premium</p>
+                    <h2 class="text-2xl font-bold text-white font-sora">Reserva tu demo</h2>
+                  </div>
+                  <div
+                    class="inline-flex items-center gap-2 px-3 py-2 rounded-full bg-slate-900/40 border border-slate-700/60">
+                    <span class="material-symbols-outlined text-[var(--primary)]">verified</span>
+                    <span class="text-xs font-semibold text-slate-200">Equipo Amazon</span>
+                  </div>
+                </div>
+
+                <div class="mb-6">
+                  <div class="flex items-center justify-between text-xs text-slate-400 mb-2">
+                    <span>Completa los datos</span>
+                    <span id="progressLabel">0%</span>
+                  </div>
+                  <div class="h-2 rounded-full bg-slate-900/50 border border-slate-700/50 overflow-hidden">
+                    <div id="progressBar" class="h-full w-0 rounded-full"
+                      style="background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent)); transition: width .35s ease;">
+                    </div>
+                  </div>
+                </div>
+
+                <form id="demoForm" class="grid gap-4" autocomplete="on">
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="text-sm text-slate-300" for="name">Nombre</label>
+                      <input class="input mt-2" id="name" name="name" placeholder="Tu nombre" required />
+                    </div>
+                    <div>
+                      <label class="text-sm text-slate-300" for="email">Email</label>
+                      <input class="input mt-2" id="email" name="email" type="email" placeholder="tu@email.com"
+                        required />
+                    </div>
+                  </div>
+
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="text-sm text-slate-300" for="company">Empresa</label>
+                      <input class="input mt-2" id="company" name="company" placeholder="Marca / Agencia" />
+                    </div>
+                    <div>
+                      <label class="text-sm text-slate-300" for="marketplace">Marketplace</label>
+                      <input class="input mt-2" id="marketplace" name="marketplace" placeholder="US / ES / MX..."
+                        required />
+                    </div>
+                  </div>
+
+                  <div class="grid sm:grid-cols-3 gap-4">
+                    <div class="sm:col-span-2">
+                      <label class="text-sm text-slate-300" for="model">Modelo</label>
+                      <select class="input mt-2" id="model" name="model" required>
+                        <option value="" disabled selected>Selecciona…</option>
+                        <option>Private Label</option>
+                        <option>Wholesale</option>
+                        <option>Arbitrage</option>
+                        <option>Agency</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="text-sm text-slate-300" for="asins"># ASINs</label>
+                      <input class="input mt-2" id="asins" name="asins" type="number" min="1" step="1"
+                        placeholder="20" />
+                    </div>
+                  </div>
+
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    <div>
+                      <label class="text-sm text-slate-300" for="date">Fecha preferida</label>
+                      <input class="input mt-2" id="date" name="date" type="date" required />
+                    </div>
+                    <div>
+                      <label class="text-sm text-slate-300" for="time">Hora preferida</label>
+                      <input class="input mt-2" id="time" name="time" type="time" required />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label class="text-sm text-slate-300" for="goals">¿Qué quieres controlar/mejorar?</label>
+                    <textarea class="input mt-2" id="goals" name="goals" rows="4"
+                      placeholder="Margen por ASIN, PPC, inventario, reportes, automatizaciones…" required></textarea>
+                  </div>
+
+                  <div class="flex flex-wrap items-center gap-3 pt-1">
+                    <button class="btn-premium btn-primary" id="submitBtn" type="submit">
+                      <span class="material-symbols-outlined">calendar_add_on</span>
+                      <span>Agendar</span>
+                      <span class="hidden" id="submitSpinner"><span class="spinner"></span></span>
+                    </button>
+
+                    <a class="btn-premium btn-ghost" href="index.html#top">
+                      <span class="material-symbols-outlined text-slate-300">arrow_back</span>
+                      Volver
+                    </a>
+
+                    <span class="text-xs text-slate-400">*Formulario demo. Conéctalo a tu CRM, Calendly o email.</span>
+                  </div>
+
+                  <div class="mt-2 grid sm:grid-cols-3 gap-3">
+                    <div class="card-glass rounded-2xl p-4 reveal">
+                      <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[var(--secondary)]">schedule</span>
+                        <div>
+                          <p class="font-semibold text-white">Rápido</p>
+                          <p class="text-xs text-slate-400 mt-1">Agendado en minutos.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-glass rounded-2xl p-4 reveal">
+                      <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[var(--primary)]">workspace_premium</span>
+                        <div>
+                          <p class="font-semibold text-white">Premium</p>
+                          <p class="text-xs text-slate-400 mt-1">Demo guiada y clara.</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card-glass rounded-2xl p-4 reveal">
+                      <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-[var(--accent)]">hub</span>
+                        <div>
+                          <p class="font-semibold text-white">Integrable</p>
+                          <p class="text-xs text-slate-400 mt-1">CRM / email / API.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="max-w-7xl mx-auto px-6 pb-10">
+      <div
+        class="card-glass rounded-2xl p-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <p class="font-semibold text-white">¿Prefieres agenda automática?</p>
+          <p class="text-sm text-slate-400 mt-1">
+            Puedes reemplazar este formulario por Calendly o Google Calendar con un iframe.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap gap-3">
+          <a class="btn-premium btn-ghost" href="dashboards.html">
+            <span class="material-symbols-outlined text-slate-300">grid_view</span>
+            Ver Dashboards
+          </a>
+          <a class="btn-premium btn-primary" href="precios.html">
+            <span class="material-symbols-outlined">sell</span>
+            Ver Planes
+          </a>
+        </div>
+      </div>
+
+      <p class="text-center text-xs text-slate-500 mt-6">© Web Analítica Premium — Demo page</p>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <div class="flex items-start gap-3">
+      <span class="material-symbols-outlined text-[var(--secondary)]">check_circle</span>
+      <div>
+        <p class="font-semibold text-white" id="toastTitle">Listo</p>
+        <p class="text-sm text-slate-300 mt-1" id="toastMsg">
+          Te contactaremos en menos de 24h para confirmar la hora.
+        </p>
+      </div>
+      <button class="ml-auto p-2 rounded-lg hover:bg-slate-800/40 transition" id="toastClose" aria-label="Cerrar">
+        <span class="material-symbols-outlined text-slate-300">close</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

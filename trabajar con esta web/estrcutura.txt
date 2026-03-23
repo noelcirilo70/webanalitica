@@ -1,0 +1,16 @@
+Estructura del proyecto:
+
+WEB ANALITICA/
+  htmls/
+    index.html
+  assets/
+    css/
+      styles.css
+    js/
+      main.js
+    img/
+      (pon aquí tus imágenes)
+
+Nota:
+- El HTML actualmente usa Tailwind por CDN y un <style type="text/tailwindcss"> inline.
+- Si quieres, luego lo migramos a CSS externo compilado (recomendado para producción).

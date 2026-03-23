@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Integraciones | Web Analítica Premium</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body>
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900"></div>
+    <div class="absolute inset-0 bg-grid"></div>
+    <div class="orb o1"></div>
+    <div class="orb o2"></div>
+    <div class="orb o3"></div>
+  </div>
+
+  <nav class="glass-nav px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <a class="flex items-center gap-3 group" href="index.html#top" aria-label="Ir a Inicio">
+        <div
+          class="w-10 h-10 bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary)] rounded-lg flex items-center justify-center shadow-lg shadow-sky-500/10 group-hover:shadow-teal-500/10 transition-shadow">
+          <span class="material-symbols-outlined text-white">monitoring</span>
+        </div>
+        <span class="text-xl font-bold tracking-tight text-white font-sora">
+          Web Analítica <span class="text-[var(--secondary)]">Premium</span>
+        </span>
+      </a>
+
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a class="hover:text-[var(--primary)] transition-colors" href="index.html#top">Inicio</a>
+        <a class="hover:text-[var(--primary)] transition-colors" href="dashboards.html">Dashboards</a>
+        <a class="hover:text-[var(--primary)] transition-colors" href="integraciones.html">Integraciones</a>
+        <a class="hover:text-[var(--primary)] transition-colors" href="agendar-demo.html">Agendar Demo</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button
+          class="md:hidden p-2 rounded-xl border border-slate-700/60 bg-slate-900/40 hover:bg-slate-900/60 transition"
+          id="mobileMenuBtn" aria-label="Abrir menú">
+          <span class="material-symbols-outlined text-slate-200">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="md:hidden max-w-7xl mx-auto px-0">
+      <div id="mobileMenu" class="hidden px-6 pb-4 pt-3">
+        <div class="grid gap-2 text-sm font-medium text-slate-300">
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="index.html#top">Inicio</a>
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="dashboards.html">Dashboards</a>
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="integraciones.html">Integraciones</a>
+          <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+            href="agendar-demo.html">Agendar Demo</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="px-6 pt-12 pb-20">
+    <section class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-[1.15fr_.85fr] gap-10 items-start">
+        <div class="reveal">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5">
+            <span class="material-symbols-outlined text-[18px] text-sky-300">hub</span>
+            <span class="text-sm text-slate-200/90">Conecta datos → dashboards en minutos</span>
+          </div>
+
+          <h1 class="font-sora text-4xl md:text-5xl font-extrabold mt-4 leading-tight">
+            Integraciones
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-teal-300"> Premium</span>
+          </h1>
+
+          <p class="mt-4 text-slate-300/90 text-lg leading-relaxed max-w-2xl">
+            Conecta Seller Central, PPC y tus herramientas favoritas. Sincroniza, automatiza reportes y recibe alertas
+            inteligentes
+            (ACOS, stock, anomalías) para tomar decisiones rápidas.
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+            <button class="chip px-4 py-2 rounded-full text-sm integration-chip" data-filter="all"
+              aria-pressed="true">Todas</button>
+            <button class="chip px-4 py-2 rounded-full text-sm integration-chip" data-filter="amazon"
+              aria-pressed="false">Amazon</button>
+            <button class="chip px-4 py-2 rounded-full text-sm integration-chip" data-filter="bi"
+              aria-pressed="false">BI & Reportes</button>
+            <button class="chip px-4 py-2 rounded-full text-sm integration-chip" data-filter="alerts"
+              aria-pressed="false">Alertas</button>
+            <button class="chip px-4 py-2 rounded-full text-sm integration-chip" data-filter="dev"
+              aria-pressed="false">API & Webhooks</button>
+          </div>
+
+          <div class="mt-8 grid sm:grid-cols-3 gap-4">
+            <div class="glass-card p-4 rounded-2xl border border-white/10 bg-white/5">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-sky-300">lock</span>
+                <div>
+                  <div class="font-semibold">Seguridad</div>
+                  <div class="text-sm text-slate-300/80">OAuth / Tokens cifrados</div>
+                </div>
+              </div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-white/10 bg-white/5">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-teal-300">sync</span>
+                <div>
+                  <div class="font-semibold">Sync inteligente</div>
+                  <div class="text-sm text-slate-300/80">Incremental + histórico</div>
+                </div>
+              </div>
+            </div>
+            <div class="glass-card p-4 rounded-2xl border border-white/10 bg-white/5">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-indigo-300">schedule</span>
+                <div>
+                  <div class="font-semibold">Automatizaciones</div>
+                  <div class="text-sm text-slate-300/80">Reportes programados</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <aside class="reveal lg:sticky lg:top-28">
+          <div class="glass-card p-6 rounded-3xl border border-white/10 bg-white/5">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <h2 class="font-sora text-xl font-bold">Estado de sincronización</h2>
+                <p class="text-sm text-slate-300/85 mt-1">Simulación visual para tu demo (se guarda en tu navegador).
+                </p>
+              </div>
+              <span class="badge text-xs px-2 py-1 rounded-full text-slate-200/80">Live Preview</span>
+            </div>
+
+            <div class="mt-5 space-y-3">
+              <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-sky-300 text-[20px]">cloud_done</span>
+                  <span class="text-sm">Conexiones activas</span>
+                </div>
+                <span id="activeCount" class="font-semibold">0</span>
+              </div>
+
+              <div class="h-2 rounded-full bg-white/5 overflow-hidden border border-white/10">
+                <div id="activeBar" class="h-full progress-glow w-[0%] transition-[width] duration-500"></div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <button id="btnConnectAll" class="btn-premium btn-primary w-full justify-center">
+                  <span class="material-symbols-outlined">bolt</span>
+                  Conectar demo
+                </button>
+                <button id="btnReset" class="btn-premium btn-ghost w-full justify-center">
+                  <span class="material-symbols-outlined">restart_alt</span>
+                  Reset
+                </button>
+              </div>
+
+              <div class="mt-3 text-xs text-slate-300/70">
+                Tip: conecta Seller Central + PPC para desbloquear dashboards de rentabilidad por ASIN.
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto mt-12">
+      <div class="flex items-end justify-between gap-4 reveal">
+        <h3 class="font-sora text-2xl font-extrabold">Conectores</h3>
+        <div class="hidden md:flex items-center gap-2 text-sm text-slate-300/80">
+          <span class="material-symbols-outlined text-[18px]">touch_app</span>
+          <span>Pasa el mouse para ver el glow</span>
+        </div>
+      </div>
+
+      <div id="cards" class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+    </section>
+
+    <section class="max-w-7xl mx-auto mt-14 reveal">
+      <div class="glass-card p-8 rounded-3xl border border-white/10 bg-white/5">
+        <div class="grid lg:grid-cols-3 gap-8 items-center">
+          <div class="lg:col-span-2">
+            <h4 class="font-sora text-2xl font-bold">Automatizaciones & Alertas</h4>
+            <p class="mt-2 text-slate-300/90">
+              Configura reportes semanales, alertas por ACOS/TACOS, stock crítico y anomalías de ventas.
+              (En tu versión real se conectaría a Slack/Email/Webhooks).
+            </p>
+            <div class="mt-5 grid sm:grid-cols-3 gap-3">
+              <div class="p-4 rounded-2xl border border-white/10 bg-white/5">
+                <div class="flex items-center gap-2 font-semibold">
+                  <span class="material-symbols-outlined text-teal-300">notifications_active</span>
+                  Stock bajo
+                </div>
+                <p class="text-sm text-slate-300/80 mt-1">Umbrales por ASIN y FBA.</p>
+              </div>
+              <div class="p-4 rounded-2xl border border-white/10 bg-white/5">
+                <div class="flex items-center gap-2 font-semibold">
+                  <span class="material-symbols-outlined text-sky-300">query_stats</span>
+                  ACOS alto
+                </div>
+                <p class="text-sm text-slate-300/80 mt-1">Reglas por campaña.</p>
+              </div>
+              <div class="p-4 rounded-2xl border border-white/10 bg-white/5">
+                <div class="flex items-center gap-2 font-semibold">
+                  <span class="material-symbols-outlined text-indigo-300">crisis_alert</span>
+                  Anomalías
+                </div>
+                <p class="text-sm text-slate-300/80 mt-1">Detección automática.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:justify-self-end">
+            <a href="agendar-demo.html" class="btn-premium btn-primary inline-flex items-center gap-2">
+              <span class="material-symbols-outlined">event_available</span>
+              Agendar Demo
+            </a>
+            <p class="text-xs text-slate-300/70 mt-2">Agenda y conectamos tu cuenta en vivo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="px-6 pb-10">
+    <div
+      class="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-sm text-slate-300/80">
+        © <span id="year"></span> Web Analítica Premium. Todos los derechos reservados.
+      </div>
+      <div class="flex items-center gap-4 text-sm">
+        <a class="text-slate-300/80 hover:text-slate-100 transition" href="index.html#faq">FAQ</a>
+        <a class="text-slate-300/80 hover:text-slate-100 transition" href="precios.html#planes">Planes</a>
+        <a class="text-slate-300/80 hover:text-slate-100 transition" href="index.html#contact">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="connectModal" class="fixed inset-0 z-50 hidden">
+    <div class="absolute inset-0 modal-backdrop"></div>
+
+    <div class="relative max-w-2xl mx-auto mt-24 px-6">
+      <div class="glass-card rounded-3xl border border-white/10 bg-white/5 overflow-hidden">
+        <div class="p-6 flex items-start justify-between gap-4">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-white/10 bg-white/5">
+              <span class="material-symbols-outlined text-[18px] text-sky-300">link</span>
+              <span class="text-sm text-slate-200/90">Asistente de conexión</span>
+            </div>
+            <h5 class="font-sora text-2xl font-extrabold mt-3" id="modalTitle">Conectar</h5>
+            <p class="text-sm text-slate-300/85 mt-1">Simulación: permisos, sincronización y verificación.</p>
+          </div>
+
+          <button id="modalClose"
+            class="p-2 rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition"
+            aria-label="Cerrar">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        </div>
+
+        <div class="px-6 pb-6">
+          <div class="grid md:grid-cols-2 gap-4">
+            <label class="block">
+              <span class="text-sm text-slate-200/90">Marketplace</span>
+              <select id="marketplace"
+                class="mt-1 w-full rounded-xl bg-slate-950/40 border border-white/10 text-slate-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500/30">
+                <option>US</option>
+                <option>ES</option>
+                <option>MX</option>
+                <option>CA</option>
+                <option>UK</option>
+              </select>
+            </label>
+
+            <label class="block">
+              <span class="text-sm text-slate-200/90">Modo</span>
+              <select id="mode"
+                class="mt-1 w-full rounded-xl bg-slate-950/40 border border-white/10 text-slate-100 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500/30">
+                <option value="read">Solo lectura</option>
+                <option value="standard">Estándar</option>
+                <option value="enterprise">Enterprise</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="mt-5 p-4 rounded-2xl border border-white/10 bg-white/5">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-teal-300">sync</span>
+                <span class="font-semibold">Sincronizando…</span>
+              </div>
+              <span id="progressPct" class="text-sm text-slate-200/85">0%</span>
+            </div>
+
+            <div class="mt-3 h-2 rounded-full bg-white/5 overflow-hidden border border-white/10">
+              <div id="progressBar" class="h-full progress-glow w-[0%] transition-[width] duration-300"></div>
+            </div>
+
+            <div class="mt-3 grid md:grid-cols-3 gap-3 text-sm">
+              <div id="step1" class="flex items-center gap-2 text-slate-300/80">
+                <span class="material-symbols-outlined text-[18px]">vpn_key</span>
+                Permisos
+              </div>
+              <div id="step2" class="flex items-center gap-2 text-slate-300/80">
+                <span class="material-symbols-outlined text-[18px]">cloud_download</span>
+                Extracción
+              </div>
+              <div id="step3" class="flex items-center gap-2 text-slate-300/80">
+                <span class="material-symbols-outlined text-[18px]">verified</span>
+                Verificación
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+            <button id="btnStartConnect" class="btn-premium btn-primary w-full sm:w-auto justify-center">
+              <span class="material-symbols-outlined">play_arrow</span>
+              Conectar ahora
+            </button>
+            <div class="text-xs text-slate-300/70">
+              Se guardará como <b>Conectado</b> en tu navegador.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">
+    <div class="glass-card px-4 py-3 rounded-2xl border border-white/10 bg-white/5 shadow-2xl">
+      <div class="flex items-start gap-3">
+        <span class="material-symbols-outlined text-teal-300">task_alt</span>
+        <div>
+          <div class="font-semibold" id="toastTitle">Conectado</div>
+          <div class="text-sm text-slate-300/85" id="toastMsg">Integración activada.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

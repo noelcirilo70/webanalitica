@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Home Web Analítica Premium | Amazon Power BI Experts</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="./assets/css/styles.css" />
+</head>
+
+<body class="mesh-gradient" id="top">
+  <nav class="glass-nav px-6 py-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex justify-between items-center">
+        <a class="flex items-center gap-3 group" href="index.html#top" aria-label="Ir a Inicio">
+          <div
+            class="w-10 h-10 bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary)] rounded-lg flex items-center justify-center shadow-lg shadow-sky-500/10 group-hover:shadow-teal-500/10 transition-shadow">
+            <span class="material-symbols-outlined text-white">monitoring</span>
+          </div>
+          <span class="text-xl font-bold tracking-tight text-white font-sora">
+            Web Analítica <span class="text-[var(--secondary)]">Premium</span>
+          </span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <a class="hover:text-[var(--primary)] transition-colors" href="index.html#top">Inicio</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="dashboards.html">Dashboards</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="index.html#integraciones">Integraciones</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="agendar-demo.html">Agendar Demo</a>
+          <a class="hover:text-[var(--primary)] transition-colors" href="precios.html">Precios</a>
+        </div>
+
+        <div class="flex items-center gap-3">
+          <button class="hidden md:inline-flex p-2 rounded-full hover:bg-slate-800 transition-colors" aria-label="modo">
+            <span class="material-symbols-outlined text-slate-400">dark_mode</span>
+          </button>
+
+          <button
+            class="md:hidden p-2 rounded-xl border border-slate-700/60 bg-slate-900/40 hover:bg-slate-900/60 transition"
+            id="mobileMenuBtn" aria-label="Abrir menú">
+            <span class="material-symbols-outlined text-slate-200">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="md:hidden px-0">
+        <div id="mobileMenu" class="hidden px-0 pb-1 pt-4">
+          <div class="grid gap-2 text-sm font-medium text-slate-300">
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="index.html#top">Inicio</a>
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="dashboards.html">Dashboards</a>
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="index.html#integraciones">Integraciones</a>
+            <a class="px-4 py-3 rounded-xl bg-slate-900/30 border border-slate-700/50 hover:border-teal-400/30 hover:text-white transition"
+              href="index.html#contact">Agendar Demo</a>
+            <div class="grid grid-cols-2 gap-2 pt-2">
+              <a class="px-4 py-3 rounded-xl border border-slate-700 bg-slate-900/30 hover:bg-slate-800 transition text-center font-semibold"
+                href="login.html#login">Login</a>
+              <a class="px-4 py-3 rounded-xl bg-gradient-to-r from-[var(--primary)] to-[var(--secondary)] text-white hover:shadow-[0_0_18px_rgba(45,212,191,0.35)] transition text-center font-semibold"
+                href="login.html#register">Registro</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative pt-20 pb-32 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="z-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 mb-6">
+          <span class="flex h-2 w-2 rounded-full bg-[var(--secondary)] animate-pulse"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-slate-400">Certificación Oficial Amazon SP-API</span>
+        </div>
+
+        <h1 class="text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-8 font-sora">
+          Domina tus datos de <span class="text-gradient">Amazon Seller Central</span>
+        </h1>
+
+        <p class="text-xl text-slate-400 mb-10 leading-relaxed max-w-xl">
+          Dashboards de Power BI de alto rendimiento diseñados específicamente para vendedores de Amazon. Transforma
+          datos complejos en decisiones rentables.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a class="btn-premium btn-primary" href="#">
+            Empieza Ahora
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+          <a class="btn-premium border border-slate-700 hover:bg-slate-800/50" href="#">
+            Ver Demo en Vivo
+          </a>
+        </div>
+
+        <div class="mt-12 flex items-center gap-6">
+          <div class="flex -space-x-3">
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-[#020617]"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGE6tpiq-uP7IsUBZgr_FqnenWbtKvMtWee_nNBHPSNyViptttoMtJ7VuBVGvnJ3Gmd4p4xhpWfsnVE16Xy_j43GskZwulHMjV6q4kVWgXDyNGG-SyLvzlary19aQEBSBEwDaNXF6bPxC5S9DZHc5gA_W-l3e9vXi9B268ygV_DMLr6Kdz7xnbxymyK0jwJX2872_WL5zT1xAedsZjPvCeFf5bxcJLGY2zKNBYyxN5QHps6fFzhjRgIvUW38oxCWbwAWyBNvxAfao" />
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-[#020617]"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuANkXlbTCHySnGu8iTEhQLSzG3hg4KCpUYWSxVXpfoIbRAWnGNPQGiDkXpM-esV5aTSIhvhoIcqb4t8uZ7aXbzuww-fTc7mpjIsjYhmD7b8zZPXwVqjlPwwIlMrOXH3a39tYGLwgRsMl-I_LIJJEMNnW6eOAMKX7J25NQx4GpwtkZzcuk-aqEhW5pjLmNDHZnuQ8nuKcLSdDdupTlrPHKwYazfHsHYsOVgHIPCvI9uhte_RasOE6JwfCG2dU6iYIIOpS242Jpg5npE" />
+            <img alt="User" class="w-10 h-10 rounded-full border-2 border-[#020617]"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpWThI-aQc_GQwcZ9-z3NQO0cV51Tx9d-BZgk_s4apc7_sc9yCQWxlf6uDpWCnPmTgsaCtS1qcs1LnvtCSzwqT_asfclek7YN0sPUX5kHL-szf2OpChkpqqaszlBdN_rpqO9SUQw37HSg5y-aOehBmVMF_nm75XDOVOvAXP_YVKzG8uqQxJ2g-SEziAmHd5LNN-j7l0qtXe3g9bFzJKobq2QwXEWGW5bxRob268jiZYY1kSoe1Ae89BsaNF8nem0ldxskxI-67CeA" />
+          </div>
+          <p class="text-sm text-slate-500">
+            Confían +500 <span class="text-slate-300 font-semibold">Amazon Sellers</span> en todo el mundo.
+          </p>
+        </div>
+      </div>
+
+      <div class="relative">
+        <div class="relative z-10 glass-card p-2 rotate-2 shadow-2xl overflow-hidden">
+          <img alt="Dashboard Preview"
+            class="rounded-xl opacity-90 grayscale-[20%] hover:grayscale-0 transition-all duration-700"
+            src="./assets/img/hero-dashboard.png" />
+        </div>
+
+        <div class="floating-card top-0 -left-8 z-20" style="animation-delay: 0s;">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <span class="material-symbols-outlined">trending_up</span>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 uppercase font-bold">Ventas Reales</p>
+              <p class="text-lg font-bold text-white">+24.8%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-card bottom-12 -right-8 z-20" style="animation-delay: 1.5s;">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400">
+              <span class="material-symbols-outlined">inventory_2</span>
+            </div>
+            <div>
+              <p class="text-xs text-slate-400 uppercase font-bold">Stock Out Risk</p>
+              <p class="text-lg font-bold text-white">Bajo (2%)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute -top-20 -right-20 w-80 h-80 bg-[var(--primary)] rounded-full blur-[120px] opacity-20"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-[var(--secondary)] rounded-full blur-[120px] opacity-20"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="py-24 bg-[#03081b]" id="integraciones">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-4 font-sora">Integraciones Sin Fisuras</h2>
+        <p class="text-slate-400 max-w-2xl mx-auto">Conectamos todas tus fuentes de datos para una visión 360º de tu negocio en Amazon.</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+        <div class="glass-card p-6 flex flex-col items-center justify-center gap-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+          <span class="material-symbols-outlined text-4xl text-orange-500">store</span>
+          <span class="text-xs font-semibold uppercase tracking-wider">Seller Central</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center justify-center gap-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+          <span class="material-symbols-outlined text-4xl text-blue-500">ads_click</span>
+          <span class="text-xs font-semibold uppercase tracking-wider">Advertising</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center justify-center gap-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+          <span class="material-symbols-outlined text-4xl text-yellow-500">payments</span>
+          <span class="text-xs font-semibold uppercase tracking-wider">Payments</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center justify-center gap-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+          <span class="material-symbols-outlined text-4xl text-emerald-500">local_shipping</span>
+          <span class="text-xs font-semibold uppercase tracking-wider">FBA/Logistics</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center justify-center gap-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+          <span class="material-symbols-outlined text-4xl text-purple-500">description</span>
+          <span class="text-xs font-semibold uppercase tracking-wider">Invoicing</span>
+        </div>
+        <div class="glass-card p-6 flex flex-col items-center justify-center gap-4 grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
+          <span class="material-symbols-outlined text-4xl text-sky-500">database</span>
+          <span class="text-xs font-semibold uppercase tracking-wider">BigQuery</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-14">
+        <div>
+          <h2 class="text-4xl font-bold mb-3 font-sora">Servicios Especializados</h2>
+          <p class="text-slate-400 max-w-2xl">Soluciones a medida para vendedores que buscan el control total sobre su rentabilidad y operaciones.</p>
+        </div>
+
+        <a href="#" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors">
+          Descargar catálogo PDF
+          <span class="material-symbols-outlined text-[20px]">download</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="glass-card p-8 h-full flex flex-col">
+          <div class="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-sky-400">dashboard</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Dashboards Power BI</h3>
+          <p class="text-slate-400 mb-6">Visualizaciones dinámicas que consolidan tus ventas, PPC y costes operativos en una sola pantalla interactiva.</p>
+
+          <ul class="space-y-3 text-sm text-slate-200/90 mb-8">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+              Actualización Automática
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+              Multi-Marketplace
+            </li>
+          </ul>
+
+          <a href="#" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors">
+            Saber más
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="glass-card p-8">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-indigo-400">database</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Integración SP-API</h3>
+          <p class="text-slate-400 mb-6">Extracción y estructuración de datos directamente desde Amazon Seller Central sin errores manuales.</p>
+
+          <ul class="space-y-3 text-sm text-slate-200/90 mb-8">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+              Histórico de Datos Limpio
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+              Conexión Directa SQL
+            </li>
+          </ul>
+
+          <a href="#" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors">
+            Saber más
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </a>
+        </div>
+
+        <div class="glass-card p-8">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center mb-6">
+            <span class="material-symbols-outlined text-emerald-400">query_stats</span>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Consultoría de PPC</h3>
+          <p class="text-slate-400 mb-6">Auditoría y optimización de campañas basada exclusivamente en data de rentabilidad neta por producto.</p>
+
+          <ul class="space-y-3 text-sm text-slate-200/90 mb-8">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+              Control de ACoS y ROAS
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-emerald-400 text-[20px]">check_circle</span>
+              Estrategia de Escalamiento
+            </li>
+          </ul>
+
+          <a href="#" class="inline-flex items-center gap-2 text-sky-400 hover:text-sky-300 font-semibold transition-colors">
+            Saber más
+            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#03081b]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+        <div class="max-w-2xl">
+          <span class="chip">Arquitectura + analítica</span>
+          <h2 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
+            De reporting manual a <span class="text-gradient">decisiones inteligentes</span>
+          </h2>
+          <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+            Centralizamos datos, automatizamos alertas y convertimos la operación en un activo analítico
+            que escala con tu crecimiento, sin “romper” infraestructura.
+          </p>
+        </div>
+
+        <div class="flex gap-3 flex-wrap">
+          <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">PPC + Costes + ASIN</span>
+          <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">Warehouse centralizado</span>
+          <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">Automations + Alertas</span>
+        </div>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div class="glass-card p-6">
+          <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Hoy</p>
+          <h3 class="mt-3 text-xl font-bold">Fragmentación</h3>
+          <p class="mt-2 text-slate-300 leading-relaxed">
+            Reportes de terceros dispersos, datos manuales y poca visibilidad real desde Seller tools.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Visión</p>
+          <h3 class="mt-3 text-xl font-bold">Gestión Data-Driven</h3>
+          <p class="mt-2 text-slate-300 leading-relaxed">
+            Infraestructura confiable que centraliza insights y habilita decisiones consistentes.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Core Gap</p>
+          <h3 class="mt-3 text-xl font-bold">Sin warehouse</h3>
+          <p class="mt-2 text-slate-300 leading-relaxed">
+            No hay almacenamiento central ni integración entre costes, ASINs, presupuestos y forecasts.
+          </p>
+        </div>
+
+        <div class="glass-card p-6">
+          <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Resultado</p>
+          <h3 class="mt-3 text-xl font-bold">Escala operativa</h3>
+          <p class="mt-2 text-slate-300 leading-relaxed">
+            Insights rápidos, alertas automatizadas y analítica escalable para empoderar a todo el equipo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+        <div>
+          <span class="chip">Modular + API-first</span>
+          <h2 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
+            Arquitectura robusta <span class="text-gradient">diseñada para escalar</span>
+          </h2>
+          <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+            Infra modular con extracción vía APIs, warehouse centralizado y automatización mediante pipelines
+            + alertas. Lista para integrarse con herramientas internas.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="glass-card p-5">
+              <div class="font-bold">Data Warehouse centralizado</div>
+              <p class="mt-2 text-slate-300">
+                PPC, costes, budgets y reporting a nivel ASIN en un único punto de verdad.
+              </p>
+            </div>
+            <div class="glass-card p-5">
+              <div class="font-bold">Pipelines + alertas</div>
+              <p class="mt-2 text-slate-300">
+                Automatización avanzada para detectar riesgos (stockout, ACoS, ROAS) y oportunidades.
+              </p>
+            </div>
+            <div class="glass-card p-5">
+              <div class="font-bold">Integración con tu stack</div>
+              <p class="mt-2 text-slate-300">
+                Conectamos con tus procesos internos (ops, finanzas, PPC) sin rehacer tu operación.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-6">
+          <div class="text-sm text-slate-300">Flujo de datos</div>
+
+          <div class="mt-6 grid grid-cols-1 gap-4">
+            <div class="p-5 rounded-2xl border border-white/10 bg-white/5">
+              <div class="font-bold">1) Fuentes</div>
+              <p class="mt-2 text-slate-300">SP-API, Advertising API, costes, inventario, presupuestos.</p>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="h-10 w-px bg-white/10"></div>
+            </div>
+
+            <div class="p-5 rounded-2xl border border-white/10 bg-white/5">
+              <div class="font-bold">2) Warehouse</div>
+              <p class="mt-2 text-slate-300">Modelo de datos limpio, histórico consistente, trazabilidad.</p>
+            </div>
+
+            <div class="flex justify-center">
+              <div class="h-10 w-px bg-white/10"></div>
+            </div>
+
+            <div class="p-5 rounded-2xl border border-white/10 bg-white/5">
+              <div class="font-bold">3) Analítica & Automatización</div>
+              <p class="mt-2 text-slate-300">Dashboards, forecasting, alertas, reporting unificado.</p>
+            </div>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">AWS-ready</span>
+            <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">Monitoring</span>
+            <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">QA + PM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#03081b]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <span class="chip">Impacto real</span>
+        <h2 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
+          Impacto <span class="text-gradient">técnico</span> y de <span class="text-gradient">negocio</span>
+        </h2>
+        <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+          No es solo visualización: es infraestructura + automatización para que el equipo tome decisiones rápidas
+          y consistentes.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div class="glass-card p-8">
+          <h3 class="text-2xl font-bold">Impacto técnico</h3>
+          <ul class="mt-5 space-y-3 text-slate-300">
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Forecasting y riesgo de stockout con señales accionables.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Segmentación a nivel ASIN/campaña/keyword con histórico limpio.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Allocation de presupuestos PPC con control por ROAS/ACoS.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Alertas automáticas ante desviaciones críticas.</li>
+          </ul>
+        </div>
+
+        <div class="glass-card p-8">
+          <h3 class="text-2xl font-bold">Impacto de negocio</h3>
+          <ul class="mt-5 space-y-3 text-slate-300">
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Decisiones transparentes con un “single source of truth”.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Priorización clara: qué arreglar primero y por qué.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Reporting unificado para equipos multi-marketplace.</li>
+            <li class="flex gap-3"><span class="text-emerald-400">✓</span> Menos tiempo en reportes, más tiempo en ejecución.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 gap-12 items-start">
+        <div>
+          <span class="chip">Partnership</span>
+          <h2 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
+            Cómo trabajamos <span class="text-gradient">contigo</span>
+          </h2>
+          <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+            Construimos en colaboración con tu equipo (PPC, Ops, Finance) para que el impacto sea operativo desde el día 1.
+          </p>
+
+          <div class="mt-10 space-y-5">
+            <div class="glass-card p-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-extrabold">1</div>
+                <div>
+                  <h3 class="text-xl font-bold">Discovery & blueprint</h3>
+                  <p class="mt-2 text-slate-300">Mapeamos fuentes, métricas clave, estructura de cuentas y objetivos por rol.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card p-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-extrabold">2</div>
+                <div>
+                  <h3 class="text-xl font-bold">Implementación modular</h3>
+                  <p class="mt-2 text-slate-300">Conectamos APIs, construimos warehouse y automatizamos pipelines/alertas.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card p-6">
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center font-extrabold">3</div>
+                <div>
+                  <h3 class="text-xl font-bold">Optimización continua</h3>
+                  <p class="mt-2 text-slate-300">Iteramos: nuevas vistas, alertas, reglas de presupuesto y reportes ejecutivos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 flex gap-4 flex-wrap">
+            <a class="btn-premium btn-primary" href="#contact">Agenda una demo</a>
+            <a class="btn-premium border border-white/10 bg-white/5 hover:bg-white/10" href="#contact">Hablar con un experto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <h2 class="text-4xl font-bold mb-4 font-sora">Nuestros <span class="text-gradient">Power BI Dashboards</span></h2>
+          <p class="text-slate-400 max-w-xl">Arquitectura de datos premium diseñada para escalar operaciones complejas y multimarca.</p>
+        </div>
+        <a class="text-[var(--primary)] font-semibold flex items-center gap-2 hover:gap-3 transition-all" href="#">
+          Ver todos los módulos <span class="material-symbols-outlined">chevron_right</span>
+        </a>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card group overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img alt="Profit Dashboard"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="./assets/img/Dashboard_1.png" />
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-2 text-[var(--secondary)] mb-3">
+              <span class="material-symbols-outlined text-sm">finance</span>
+              <span class="text-xs font-bold uppercase tracking-widest">Finanzas &amp; Profit</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Rentabilidad Real (P&amp;L)</h3>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Control total de márgenes después de fees, PPC, COGS y logística en tiempo real.</p>
+            <div class="flex gap-2">
+              <span class="bg-slate-800 text-[10px] font-bold px-2 py-1 rounded border border-slate-700 uppercase">Automático</span>
+              <span class="bg-slate-800 text-[10px] font-bold px-2 py-1 rounded border border-slate-700 uppercase">Multi-Market</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card group overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img alt="Advertising Dashboard"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="./assets/img/Dashboard_2.png" />
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-2 text-[var(--primary)] mb-3">
+              <span class="material-symbols-outlined text-sm">ads_click</span>
+              <span class="text-xs font-bold uppercase tracking-widest">Advertising</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Optimización PPC Avanzada</h3>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Analiza TACOS, ROAS y la atribución orgánica para maximizar cada euro invertido.</p>
+            <div class="flex gap-2">
+              <span class="bg-slate-800 text-[10px] font-bold px-2 py-1 rounded border border-slate-700 uppercase">Keywords</span>
+              <span class="bg-slate-800 text-[10px] font-bold px-2 py-1 rounded border border-slate-700 uppercase">TACOS Focus</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card group overflow-hidden">
+          <div class="h-48 overflow-hidden">
+            <img alt="Inventory Dashboard"
+              class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+              src="./assets/img/Dashboard_3.png" />
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-2 text-amber-400 mb-3">
+              <span class="material-symbols-outlined text-sm">inventory_2</span>
+              <span class="text-xs font-bold uppercase tracking-widest">Inventario</span>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-white">Predicción de Stock Out</h3>
+            <p class="text-slate-400 text-sm mb-6 leading-relaxed">Algoritmos de previsión de demanda para evitar roturas de stock y optimizar envíos FBA.</p>
+            <div class="flex gap-2">
+              <span class="bg-slate-800 text-[10px] font-bold px-2 py-1 rounded border border-slate-700 uppercase">Forecast</span>
+              <span class="bg-slate-800 text-[10px] font-bold px-2 py-1 rounded border border-slate-700 uppercase">FBA Alert</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 bg-[#03081b]" id="faq">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="max-w-3xl">
+        <span class="chip">FAQ</span>
+        <h2 class="mt-4 text-4xl md:text-5xl font-extrabold tracking-tight">
+          Preguntas <span class="text-gradient">frecuentes</span>
+        </h2>
+        <p class="mt-4 text-slate-300 text-lg leading-relaxed">
+          Resolvemos lo típico antes de la llamada para que la demo sea 100% accionable.
+        </p>
+      </div>
+
+      <div class="mt-10 max-w-4xl">
+        <div class="glass-card p-8 h-full flex flex-col self-stretch">
+          <h3 class="text-2xl font-bold">Preguntas frecuentes</h3>
+          <p class="mt-3 text-slate-300">Resolvemos lo típico antes de la llamada.</p>
+
+          <div class="mt-6 flex-1 flex flex-col gap-3" data-accordion>
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Necesito dar acceso completo a mi cuenta?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                No. Configuramos accesos mínimos necesarios y seguimos un enfoque de permisos por rol.
+              </div>
+            </div>
+
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Qué fuentes integran además de Amazon?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                Podemos integrar costes operativos, presupuestos, inventario y herramientas internas según tu stack.
+              </div>
+            </div>
+
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Se puede escalar a múltiples marketplaces?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                Sí. La arquitectura está pensada para multi-marketplace con histórico consistente y comparables.
+              </div>
+            </div>
+
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Qué pasa con performance y seguridad?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                Diseñamos con monitoring, control de calidad y buenas prácticas de infraestructura (AWS-ready).
+              </div>
+            </div>
+
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Se puede conectar con herramientas internas (ERP/finanzas/BI)?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                Sí. Integramos tu stack según necesidad (finanzas, operaciones, BI) para que el warehouse sea el punto central de verdad.
+              </div>
+            </div>
+
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Cómo es el soporte y la evolución del sistema?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                Trabajamos por iteraciones: mejoras continuas, nuevos módulos, ajustes de métricas y alertas según cambios en tu negocio.
+              </div>
+            </div>
+
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Qué incluye la demo en vivo?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                Te mostramos casos reales, métricas clave por rol y cómo se configuran alertas/automatizaciones para tu operación.
+              </div>
+            </div>
+
+            <div class="faq-item border border-white/10 rounded-2xl overflow-hidden">
+              <button class="faq-btn w-full text-left px-5 py-4 flex items-center justify-between gap-4">
+                <span class="font-semibold">¿Cómo se personaliza para mi estructura de cuentas?</span>
+                <span class="faq-icon text-slate-300 transition-transform duration-300">+</span>
+              </button>
+              <div class="faq-panel px-5 pb-4 text-slate-300 hidden">
+                Adaptamos el modelo de datos y las vistas a tu estructura (marketplaces, marcas, catálogos) y a tus reglas de negocio.
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-6 border-t border-white/10 flex flex-wrap gap-3">
+            <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">Setup guiado</span>
+            <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">Soporte premium</span>
+            <span class="px-4 py-2 rounded-full border border-white/10 bg-white/5 text-slate-200 text-sm">Roadmap modular</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 relative overflow-hidden" id="contact">
+    <div class="max-w-5xl mx-auto px-6 relative z-10">
+      <div class="glass-card p-12 md:p-20 text-center border-[var(--primary)]/30">
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6 font-sora">
+          ¿Listo para escalar con <span class="text-gradient">datos reales</span>?
+        </h2>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+          Solicita una auditoría gratuita de tu cuenta de Amazon y te mostramos cómo Power BI puede cambiar tu rentabilidad.
+        </p>
+        <div class="flex justify-center gap-4">
+          <button class="btn-premium btn-primary">Agendar Auditoría Gratis</button>
+        </div>
+        <p class="mt-8 text-xs text-slate-500 font-medium uppercase tracking-widest">
+          Sin compromiso • Setup en 48 horas • Soporte Premium
+        </p>
+      </div>
+    </div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[var(--primary)] blur-[160px] opacity-10 rounded-full"></div>
+  </section>
+
+  <footer class="py-16 border-t border-slate-800 bg-[#01040f]">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-16">
+        <div class="col-span-1 md:col-span-1">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-8 h-8 bg-gradient-to-tr from-[var(--primary)] to-[var(--secondary)] rounded flex items-center justify-center">
+              <span class="material-symbols-outlined text-white text-sm">monitoring</span>
+            </div>
+            <span class="text-lg font-bold tracking-tight text-white font-sora">Web Analítica</span>
+          </div>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">
+            Expertos en Business Intelligence para Amazon Sellers. Transformamos datos en activos estratégicos.
+          </p>
+          <div class="flex gap-4">
+            <a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+            <a class="text-slate-400 hover:text-white transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Soluciones</h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Auditoría de Datos</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Dashboards a Medida</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Consultoría Amazon</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Automatización API</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Dashboard Modules</h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Módulo de Profit</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Control de PPC</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Gestión de Stock</a></li>
+            <li><a class="hover:text-[var(--primary)] transition-colors" href="#">Atribución Externa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Contacto</h4>
+          <ul class="space-y-4 text-sm text-slate-400">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-xs text-[var(--primary)] mt-1">mail</span>
+              <span>hello@webanalitica.pro</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-xs text-[var(--primary)] mt-1">location_on</span>
+              <span>Barcelona, Hub Digital de Innovación</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-slate-900 gap-4">
+        <p class="text-xs text-slate-600">© 2024 Web Analítica Premium. Todos los derechos reservados.</p>
+        <div class="flex gap-6 text-xs text-slate-600">
+          <a class="hover:text-slate-400" href="#">Privacidad</a>
+          <a class="hover:text-slate-400" href="#">Términos</a>
+          <a class="hover:text-slate-400" href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
